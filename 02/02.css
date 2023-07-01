@@ -1,0 +1,140 @@
+.icon-content {
+    width: 100%;
+    max-width: 400px;
+    min-height: 200px;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #019463, #018559);
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    /* border: 1px solid; */
+    width: 80%;
+    max-width: 163px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    transition: all ease-in-out 200ms;
+}
+
+.icon span {
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    /* transition: all ease-in-out 200ms; */
+    box-shadow: 0 0 10px #0000008a;
+}
+
+/* .toggle {
+    position: relative;
+    gap: 0;
+    transition: all ease-in-out 200ms;
+
+} */
+
+/* animaciones reversa */
+.line3 {
+    animation: buttonRevert 700ms ease-in-out backwards;
+}
+
+@keyframes buttonRevert {
+    0%{
+        transform: translateY(-163%) rotate(135deg);
+    }
+    50%{
+        transform: translateY(-163%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}
+
+.line2 {
+    animation: centerRevert 700ms ease-in-out forwards;
+}
+
+@keyframes centerRevert {
+    0%,50%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.line1 {
+    animation: topRevert 700ms ease-in-out forwards;
+}
+
+@keyframes topRevert {
+    0%{
+        transform: translateY(163%) rotate(45deg);
+    }
+    50%{
+        transform: translateY(163%)
+    } 
+    100%{
+        transform: translateY(0%)
+    }
+}
+/* fin animaciones reversa */
+
+/* animaciones normales */
+.top {
+    animation: topAnimation 700ms ease-in-out forwards;
+}
+
+@keyframes topAnimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateY(163%);
+    }
+    100%{
+        transform: translateY(163%) rotate(45deg);
+    }
+}
+
+.center {
+    animation: centerAnimation 700ms ease-in-out forwards;
+}
+
+@keyframes centerAnimation {
+    0%{
+        scale: 1;
+    }
+    50%,100%{
+        scale: 0;
+    }
+}
+
+.button {
+    animation: buttonAnimation 700ms ease-in-out forwards;
+}
+
+@keyframes buttonAnimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateY(-163%);
+    }
+    100%{
+        transform: translateY(-163%) rotate(135deg);
+    }
+}
+
+/* .toggle span {
+    position: absolute;
+} */
